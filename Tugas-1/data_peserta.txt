@@ -1,0 +1,11 @@
+Data Peserta Bootcamp Digital Skill - NodeJS Backend Development
+1. Nama: Achyar Bagus 
+2. Email: Achyarbagus@gmail.com
+3. Sistem Operasi yang digunakan: Windows 11 Home
+4. Akun Gitlab/Github: https://github.com/achyarrbagus
+5. Akun Telegram: Achyarbagus
+
+setelah itu tinggal jalankan
+git add .
+git commit -m "Sudah selesai"
+git push origin main atau git push origin master
