@@ -14,7 +14,7 @@ const dataHandling = (input) => {
   return input.forEach((item, index) => {
     console.log("Nomor ID:", item[0]);
     console.log("Nama Lengkap:", item[1]);
-    console.log("TTL ", item[2]);
+    console.log("TTL :", item[2]);
     console.log("Hobi:", item[3]);
     console.log("---");
   });
