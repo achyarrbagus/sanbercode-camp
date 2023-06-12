@@ -2,7 +2,7 @@ import text from "./src/lib";
 
 console.log("hello world");
 let scores = ["98", "95", "93", "90", "87", "85"];
-let [first, second, ...restOfScores] = scores;
+let [first, ...restOfScores] = scores;
 
 //
 console.log(first); // 98
