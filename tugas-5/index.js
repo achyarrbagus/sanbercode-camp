@@ -46,6 +46,7 @@ let inputPenumpang = [
 ];
 
 function naikAngkot(listPenumpang) {
+  "";
   let arrayResult = [];
   listPenumpang.map((item, index) => {
     let objectResult = {
