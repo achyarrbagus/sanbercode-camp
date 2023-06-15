@@ -11,6 +11,9 @@ names.map(function (nama, index) {
   var kelas = sanber.classes[index % 2]._name;
   sanber.Register(kelas, newStud);
 });
+
+// console.log(sanber.Bootcamp, "ini sini");/
+
 sanber.classes.forEach(function (kelas) {
   console.log(kelas);
 });

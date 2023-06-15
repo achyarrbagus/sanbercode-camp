@@ -13,6 +13,8 @@ names.map((nama, index) => {
   sanber.Register(kelas, newStud);
 });
 
+// console.log(sanber.Bootcamp, "ini sini");/
+
 sanber.classes.forEach((kelas) => {
   console.log(kelas);
 });
