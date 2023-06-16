@@ -8,6 +8,8 @@ export class KaryawantModel {
       this._students = [];
     }
   }
+
+  
   get Response() {
     return {
       name: this._name,
@@ -16,6 +18,7 @@ export class KaryawantModel {
       isLogin: this._isLogin,
     };
   }
+
   set isLogin(value) {
     this._isLogin = value;
   }
