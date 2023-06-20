@@ -9,7 +9,6 @@ export class KaryawantModel {
     }
   }
 
-  
   get Response() {
     return {
       name: this._name,
