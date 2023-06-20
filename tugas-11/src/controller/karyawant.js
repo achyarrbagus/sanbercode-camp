@@ -69,7 +69,9 @@ class BootcampController {
       }
       let dataJson = JSON.parse(data);
       let { name, password } = req.body;
-      const matchedUsers = dataJson.find((user) => user.name === name && user.password === password);
+      const matchedUsers = dataJson.find(
+        (user) => String(user.name).toLowerCase() === String(name).toLowerCase() && user.password === password
+      );
       if (!matchedUsers) {
         return res.status(404).json({
           message: "Username dan Password salah",
@@ -104,7 +106,6 @@ class BootcampController {
 
   static AddSiswa(req, res) {
     const trainerName = req.params.name;
-    // Lakukan sesuatu dengan karyawanName
     let { name, kelas } = req.body;
 
     fs.readFile(path, (err, data) => {
