@@ -1,0 +1,85 @@
+jawaban task day 9 sql
+
+1. create database library;
+
+2. create database myshop => use myshop => ;
+//create tabel users
+
+    CREATE TABLE users (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+    )
+//create tabel categories
+
+    CREATE TABLE categories (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+    )
+//create tabel books
+
+    CREATE TABLE books (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    summary TEXT,
+    stock INTEGER,
+    category_id INTEGER,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+    )
+
+
+3.INSERT data
+
+users
+name	email	password
+John Doe	john@doe.com	john123
+Jane Doe	jane@doe.com	jenita123
+
+//users
+INSERT INTO users (name, email, password)
+VALUES ("Jane Doe", "john@doe.com", "john123"),
+ ("Jane Doe", "john@doe.com", "jenita123");
+
+categories
+name
+Novel
+Manga
+Comic
+History
+IT
+
+//categories
+INSERT INTO categories (name)
+VALUES ("Novel"),
+ ("Manga"),
+ ("Comic"),
+ ("History"),
+ ("IT")
+
+
+//books
+title	summary	Stok	category_id
+One piece	The series focuses on Monkey D Luffy, a young man made of rubber	50	2
+Laskar Pelangi	Belitung is known for its richness in tin, making it one of Indonesia's richest islands	25	1
+Your Name	Mitsuha Miyamizu, a high school girl living in the fictional town of Itomori in Gifu Prefecture's	15	2
+
+
+INSERT INTO books (title, summary,stock, category_id)
+VALUES ("One piece", "The series focuses on Monkey D Luffy, a young man made of rubber", 50,2),
+ ("Laskar Pelangi", "Belitung is known for its richness in tin, making it one of Indonesia's richest islands",25,1),
+ ("Your Name", "Mitsuha Miyamizu, a high school girl living in the fictional town of Itomori in Gifu Prefecture's",15,2);
+
+
+//4.Mengambil Data dari Database
+
+a. SELECT id,name,email FROM users;
+b. 1. SELECT * FROM books WHERE stock > 20;
+   2. SELECT * FROM books WHERE title LIKE '%one%'
+
+c. SELECT books.title, books.summary, books.stock, books.category_id, categories.name
+FROM books
+JOIN categories ON books.category_id = categories.id;
+
+//5.Update data dari database
+UPDATE books SET stock = 30 WHERE title = 'One Piece';
