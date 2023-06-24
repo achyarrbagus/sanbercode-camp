@@ -24,9 +24,11 @@ export default class BookValidator {
    *    ```
    */
   public schema = schema.create({
-    title: schema.string(),
-    body: schema.string(),
-    categories: schema.array().members(schema.number()),
+    judul: schema.string(),
+    ringkasan: schema.string(),
+    tahun_terbit: schema.string(),
+    halaman: schema.number(),
+    kategoris_id: schema.number(),
   });
 
   /**

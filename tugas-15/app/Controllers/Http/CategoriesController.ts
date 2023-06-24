@@ -17,7 +17,8 @@ export default class CategoriesController {
       });
     } catch (error) {
       response.status(400).json({
-        request: "tagu",
+        status: "error",
+        message: error,
       });
     }
   }

@@ -20,5 +20,5 @@
 
 import Route from "@ioc:Adonis/Core/Route";
 
-// Route.resource("books", "BooksController").apiOnly(); // 👈cl
+Route.resource("books", "BooksController").apiOnly(); // 👈cl
 Route.resource("category", "CategoriesController").apiOnly(); // 👈
