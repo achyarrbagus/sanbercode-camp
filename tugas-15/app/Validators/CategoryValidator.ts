@@ -24,7 +24,7 @@ export default class CategoryValidator {
    *    ```
    */
   public schema = schema.create({
-    nama: schema.string({}, [rules.maxLength(45)]),
+    nama: schema.string({}, [rules.maxLength(45), rules.minLength(5)]),
   });
 
   /**
