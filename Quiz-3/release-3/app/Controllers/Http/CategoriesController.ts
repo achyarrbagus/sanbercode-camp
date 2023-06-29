@@ -36,15 +36,19 @@ export default class CategoriesController {
   public async show({ request, response }: HttpContextContract) {
     try {
       const id: string = request.param("id");
-      const category = await Category.preload("profile", (profileQuery) => {
-        profileQuery.where("isActive", true);
-      });
-      if (category.length == 0) {
-        return response.status(404).json({
-          status: " success",
-          message: "Category Not Found",
-        });
-      }
+      const category = await Category.query().where("id", id).preload("games");
+      // const ctgr = await Category.query()
+      //   .preload("games", (query) => {
+      //     query.where("categories_id", id);
+      //   })
+      //   .first();
+
+      // if (category.length == 0) {
+      //   return response.status(404).json({
+      //     status: " success",
+      //     message: "Category Not Found",
+      //   });
+      // }
       response.status(200).json({
         status: " success",
         data: category,
